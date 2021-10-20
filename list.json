@@ -1,0 +1,8 @@
+{
+ "sql 1.sql": ".\\SQL\\sql 1.sql",
+ "sql 2.sql": ".\\SQL\\sql 2.sql",
+ "sql 1 copy 2.sql": ".\\SQL\\aaa\\sql 1 copy 2.sql",
+ "sql 1 copy 3.sql": ".\\SQL\\aaa\\sql 1 copy 3.sql",
+ "sql 1 copy.sql": ".\\SQL\\aaa\\sql 1 copy.sql",
+ "test.txt": ".\\SQL\\test.txt"
+}
