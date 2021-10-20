@@ -15,18 +15,19 @@ function loadFiles(){
             i = i  + 1;
             let att1 = 'header_' + i;
             let att2 = 'content_' + i;
+
             var x = document.createElement('p');
             x.setAttribute('class', 'file-name')
             x.setAttribute('id',att1);
-            x.setAttribute('onclick','XD("' + att2 + '")');
-            //x.innerText = i + ': ' + lst[key];
+            x.setAttribute('onclick','showContent("' + att2 + '")');
             x.innerText = lst[key];
             document.getElementById('p1').appendChild(x);
+
             var y = document.createElement('p');
             y.setAttribute('class', 'file-content')
             y.setAttribute('id', att2);
+            y.setAttribute('onclick','copyContent("' + att2 + '")');            
             y.innerText = txt;
-            //y.innerHTML = txt;
             document.getElementById('p1').appendChild(y);
         }
     hideAll();
@@ -41,10 +42,17 @@ function getFileContent(myurl){
 }
 
 
-function XD(h){
-    console.log(h);
+function showContent(c){
     hideAll();
-    document.getElementById(h).style.display = 'inline';
+    document.getElementById(c).style.display = 'inline';
+}
+
+function copyContent(c){
+    getSelection().removeAllRanges();
+    var range = document.createRange();
+    range.selectNodeContents(document.getElementById(c));
+    getSelection().addRange(range);
+    document.execCommand("copy");
 }
 
 function hideAll(){

@@ -26,9 +26,17 @@ p {
     font-weight: bold;
     padding-left:10px;
 }
+.file-name:hover {    color:red;}
+
 .file-content {
     color:rgb(31, 28, 28);
     font-size: 18;
     text-align: center;    
     padding-left:30px;
+    display:block;
+}
+
+.file-content:hover{
+    background-color:rgb(230, 200, 68);   
+    padding-right:30px
 }
